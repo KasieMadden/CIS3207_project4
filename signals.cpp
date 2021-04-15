@@ -54,9 +54,10 @@ void timeHandler(){
 }
 
 //random number generator
-float randomGenerator(float min, float max) {
-    float randNum;
-    randNum = (rand() %(min - max + 1))+ min;
+int randomGenerator(int min, int max) {
+    int randNum;
+    srand(time(0));
+    randNum = (rand() % (min - max + 1))+ min;
     return randNum;
 }//end of randomNum()
 
@@ -66,15 +67,15 @@ void signalGenerator(){
   
 
 
-    float Num = randomGenerator(0, 1);
-    if (Num >= 0 && Num <= .5  ){
+    int Num = randomGenerator(0, 100);
+    if (Num >= 0 && Num <= 50  ){
         pthread_mutex_lock(&sigUser1SentLockCount);
         sharedM-> sigUser1SentCount;
         pthread_mutex_unlock(&sigUser1SentLockCount);
         kill(0,SIGUSR1);
 
     }
-    else if( Num > .5 && Num <= 1){
+    else if( Num > 50 && Num <= 100){
         pthread_mutex_lock(&sigUser1SentLockCount);
         sharedM-> sigUser2SentCount;
         pthread_mutex_unlock(&sigUser1SentLockCount);
