@@ -1,15 +1,7 @@
 #include "signals.h"
 
 
-void timeHandler();
-
-
-typedef struct shMemory{
-    int test = 0 ;
-};
-
-
-
+shMemory *sharedM;
 
 
 int main() {
@@ -26,7 +18,7 @@ int main() {
 
 
 
-    struct shMemory *shMemory;
+    shMemory *shMemory;
     shMemory = (struct shMemory *) shmat(shmID, NULL, 0); //get the shared memory
 
     //shared memory porinter
@@ -62,18 +54,40 @@ void timeHandler(){
 }
 
 //random number generator
-int randomGenerator(int min, int max) {
-    int randNum;
-    randNum = rand() % min + max;
+float randomGenerator(float min, float max) {
+    float randNum;
+    randNum = (rand() %(min - max + 1))+ min;
     return randNum;
 }//end of randomNum()
 
 
 //signal generator
-void signalGen(){
+void signalGenerator(){
+  
 
+
+    float Num = randomGenerator(0, 1);
+    if (Num >= 0 && Num <= .5  ){
+        pthread_mutex_lock(&sigUser1SentLockCount);
+        sharedM-> sigUser1SentCount;
+        pthread_mutex_unlock(&sigUser1SentLockCount);
+        kill(0,SIGUSR1);
+
+    }
+    else if( Num > .5 && Num <= 1){
+        pthread_mutex_lock(&sigUser1SentLockCount);
+        sharedM-> sigUser2SentCount;
+        pthread_mutex_unlock(&sigUser1SentLockCount);
+        kill(0,SIGUSR2);
+
+    }
+    else{
+        usleep(1000000);
+    }
 
 }
+
+
 
 void signalHan(int signal){
 
