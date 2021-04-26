@@ -12,8 +12,9 @@
 using namespace std;
 
 void timeHandler();
-float randomGenerator(float min, float max);
+int randomGenerator(int min, int max);
 void signalGenerator();
+void mutexInit();
 
 //actually counters
 typedef struct shMemory{
@@ -25,7 +26,7 @@ typedef struct shMemory{
 };
 
 //golbal locks for the counters  for 2 signals both sent and recive 
-pthread_mutex_t sigUser1SentLockCount;
-pthread_mutex_t sigUser2SentLockCount;
-pthread_mutex_t sigUser1reciveLockCount;
-pthread_mutex_t sigUser2reciveLockCount;
+pthread_mutex_t sigUser1SentLock;
+pthread_mutex_t sigUser2SentLock;
+pthread_mutex_t sigUser1reciveLock;
+pthread_mutex_t sigUser2reciveLock;
