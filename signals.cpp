@@ -1,20 +1,10 @@
 #include "signals.h"
 
-/* 
-Create shared counters and individual locks for each counter.
-Proper/safe access to send and receive counts
-Description of testing and documentation (did they include logs in processes, e.g.).
 
-*/
-
-
-
-
-shMemory *sharedM;
 
 int main() {
   
-         //Create shared memory and attach to all processes
+    //Create shared memory and attach to all processes
 
     //shared memory space
     int shmID = shmget(IPC_PRIVATE, sizeof(shMemory), IPC_CREAT | 0666);
@@ -30,6 +20,33 @@ int main() {
         }//end of if
       // cout<<"sharedMem\t"<< sharedMem << endl;
 
+      pid_t process[8];
+      for(int i = 0; i <= 8; i++){
+          process[i] = fork();
+
+          if(process[i] < 0){
+              cout<<"Forking Error" << endl;
+          }//end of if
+          //child proccess 
+          if(process == 0 ){
+              if(i < 2){
+                  //creating sig1
+
+              }
+              else if( i <4){
+                  //creating sig2
+                
+              }
+              else if(i<7){
+                  //siggen 
+              }
+              else{
+                  //report
+              }
+
+          }
+
+      }//end 
 
 
 
@@ -114,9 +131,7 @@ void mutexInit(){
         exit(1);
     }
 
-}
-
-
+}//end 
 
 
 void signal1(){
@@ -129,7 +144,7 @@ void signal1(){
 
 }//end of signal1()
 
-void sig2(){
+void signal2(){
 
     signal(SIGUSR1, SIG_IGN); // ingnore signal 1 
     while(true){
@@ -140,31 +155,45 @@ void sig2(){
 }//end of sig2()
 
 void sig1Handler(int theSignal){
-    
+
     if(theSignal = SIGUSR1){
         pthread_mutex_lock(&sigUser1reciveLock);
-        sharedM -> sigUser1reciveCount++;
-        pthread_mutex_lock(&sigUser1reciveLock);
+        sharedM -> sigUser1reciveCount++;//accecssing the shared memory
+        pthread_mutex_unlock(&sigUser1reciveLock);
+        
     }//end of if
+
 }//end of sig1Handler()
 
 void sig2Handler(int theSignal){
+
      if(theSignal = SIGUSR2){
         pthread_mutex_lock(&sigUser2reciveLock);
-        sharedM -> sigUser2reciveCount++;
-        pthread_mutex_lock(&sigUser2reciveLock);
+        sharedM -> sigUser2reciveCount++; //accecssing the shared memory
+        pthread_mutex_unlock(&sigUser2reciveLock);
     }//end of if
 
 }
+/*
+void blockSignal(int theSignal){
+    sigset_t signalSet;
+    sigemptyset(&signalSet);
+    sigaddset(&signalSet, theSignal);
+    sigprocmask(SIG_BLOCK, &signalSet, NULL);
+}//end of block()
 
-void blockSignal(){
+void unblockSignal(int theSignal){
+    sigset_t signalSet;
+    sigemptyset(&signalSet);
+    sigaddset(&signalSet, theSignal);
+    sigprocmask(SIG_UNBLOCK, &signalSet, NULL);
 
-}
-
-void unblockSignal(){
-    
-}
-
+}//end of unblock()
+*/
 void reporter(){
+
+
+
+
 
 }
