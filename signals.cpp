@@ -1,5 +1,14 @@
 #include "signals.h"
 
+/* 
+Create shared counters and individual locks for each counter.
+Proper/safe access to send and receive counts
+Description of testing and documentation (did they include logs in processes, e.g.).
+
+*/
+
+
+
 
 shMemory *sharedM;
 
@@ -33,6 +42,9 @@ int main() {
 
 
 
+
+
+
 }//end of main()
 
 void timeHandler(){
@@ -50,7 +62,6 @@ void timeHandler(){
     sleep(1);
     }
 
-
 }
 
 //random number generator
@@ -61,24 +72,27 @@ int randomGenerator(int min, int max) {
     return randNum;
 }//end of randomNum()
 
+int randomSleepGen(int min, int max){
+    
+}
+
 
 //signal generator
 void signalGenerator(){
   
 
-
     int Num = randomGenerator(0, 100);
     if (Num >= 0 && Num <= 50  ){
-        pthread_mutex_lock(&sigUser1SentLockCount);
+        pthread_mutex_lock(&sigUser1SentLock);
         sharedM-> sigUser1SentCount;
-        pthread_mutex_unlock(&sigUser1SentLockCount);
+        pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR1);
 
     }
     else if( Num > 50 && Num <= 100){
-        pthread_mutex_lock(&sigUser1SentLockCount);
+        pthread_mutex_lock(&sigUser1SentLock);
         sharedM-> sigUser2SentCount;
-        pthread_mutex_unlock(&sigUser1SentLockCount);
+        pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR2);
 
     }
@@ -88,6 +102,31 @@ void signalGenerator(){
 
 }
 
+
+void mutexInit(){
+    int success = 0; 
+    success = pthread_mutex_init(&sigUser1SentLock, NULL); 
+    if(success != 0){
+        cout<<"Initializer for lock failed" <<endl;
+        exit(1);
+    }
+    success = pthread_mutex_init(&sigUser2SentLock, NULL); 
+    if(success != 0){
+        cout<<"Initializer for lock failed" <<endl;
+        exit(1);
+    }
+    success = pthread_mutex_init(&sigUser1reciveLock, NULL); 
+    if(success != 0){
+        cout<<"Initializer for lock failed" <<endl;
+        exit(1);
+    }
+    success = pthread_mutex_init(&sigUser2reciveLock, NULL); 
+    if(success != 0){
+        cout<<"Initializer for lock failed" <<endl;
+        exit(1);
+    }
+
+}
 
 
 void signalHan(int signal){
