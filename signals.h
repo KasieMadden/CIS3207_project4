@@ -18,11 +18,14 @@ void mutexInit();
 
 //actually counters
 typedef struct shMemory{
-    int test = 0 ;
+    
     int sigUser1SentCount = 0;
     int sigUser2SentCount = 0;
     int sigUser1reciveCount = 0;
     int sigUser2reciveCount = 0;
+    int allSignalsSent = 0;
+    int allSignalsRecived = 0;
+
 };
 
 //golbal locks for the counters  for 2 signals both sent and recive 
