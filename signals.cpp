@@ -72,37 +72,33 @@ int randomGenerator(int min, int max) {
     return randNum;
 }//end of randomNum()
 
-int randomSleepGen(int min, int max){
-    
-}
-
 
 //signal generator
 void signalGenerator(){
-  
+    int randNum = randomGenerator(0, 100);  
+    int randTime = (randomGenerator(10000,100000));
 
-    int Num = randomGenerator(0, 100);
-    if (Num >= 0 && Num <= 50  ){
+    while(true){
+    if (randNum >= 0 && randNum <= 50  ){
         pthread_mutex_lock(&sigUser1SentLock);
         sharedM-> sigUser1SentCount;
         pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR1);
 
     }
-    else if( Num > 50 && Num <= 100){
+    else( randNum > 50 && randNum <= 100){
         pthread_mutex_lock(&sigUser1SentLock);
         sharedM-> sigUser2SentCount;
         pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR2);
 
     }
-    else{
-        usleep(1000000);
-    }
+        usleep(randTime);
 
-}
+    }//end of while loop
+}//end of signal generator 
 
-
+//to Initialize the locks 
 void mutexInit(){
     int success = 0; 
     success = pthread_mutex_init(&sigUser1SentLock, NULL); 
@@ -129,9 +125,31 @@ void mutexInit(){
 }
 
 
-void signalHan(int signal){
+void blockSignal(){
 
 }
+
+void unblockSignal(){
+    
+}
+
+void sig1 (int signal){
+
+
+}
+
+void sig2(){
+
+}
+
+void sig1Handler(){
+
+}
+
+void sig2Handler(){
+
+}
+
 
 void reporter(){
 
