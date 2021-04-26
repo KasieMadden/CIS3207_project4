@@ -12,28 +12,20 @@ Description of testing and documentation (did they include logs in processes, e.
 
 shMemory *sharedM;
 
-
 int main() {
   
          //Create shared memory and attach to all processes
 
     //shared memory space
     int shmID = shmget(IPC_PRIVATE, sizeof(shMemory), IPC_CREAT | 0666);
-        if (shmID < 0){
+    if (shmID < 0){
             cout<<"error with shmget "<<endl;
         }
 
     //cout<<"shmID\t"<< shmID << endl;
 
-
-
-    shMemory *shMemory;
-    shMemory = (struct shMemory *) shmat(shmID, NULL, 0); //get the shared memory
-
-    //shared memory porinter
-    struct SharedMem *sharedMem;
-    sharedMem = (struct SharedMem *) shmat(shmID, NULL, 0);
-        if(sharedMem == (SharedMem *) - 1){
+    sharedM = (shMemory *) shmat(shmID, NULL, 0); //get the shared memory
+        if(sharedM == (void *) - 1){
             cout<< "error with shmat"<<endl;
         }//end of if
       // cout<<"sharedMem\t"<< sharedMem << endl;
@@ -81,14 +73,14 @@ void signalGenerator(){
     while(true){
     if (randNum >= 0 && randNum <= 50  ){
         pthread_mutex_lock(&sigUser1SentLock);
-        sharedM-> sigUser1SentCount;
+        sharedM -> sigUser1SentCount;
         pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR1);
 
     }
     else( randNum > 50 && randNum <= 100){
         pthread_mutex_lock(&sigUser1SentLock);
-        sharedM-> sigUser2SentCount;
+        sharedM -> sigUser2SentCount;
         pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR2);
 
@@ -125,6 +117,46 @@ void mutexInit(){
 }
 
 
+
+
+void signal1(){
+  
+    signal(SIGUSR2, SIG_IGN);// ignore signal 2 
+    while(true){
+        signal(SIGUSR1, sig1Handler);
+        sleep(1);
+    }//end of while
+
+}//end of signal1()
+
+void sig2(){
+
+    signal(SIGUSR1, SIG_IGN); // ingnore signal 1 
+    while(true){
+        signal(SIGUSR2, sig2Handler);
+        sleep(1);
+    }// end of while
+
+}//end of sig2()
+
+void sig1Handler(int theSignal){
+    
+    if(theSignal = SIGUSR1){
+        pthread_mutex_lock(&sigUser1reciveLock);
+        sharedM -> sigUser1reciveCount++;
+        pthread_mutex_lock(&sigUser1reciveLock);
+    }//end of if
+}//end of sig1Handler()
+
+void sig2Handler(int theSignal){
+     if(theSignal = SIGUSR2){
+        pthread_mutex_lock(&sigUser2reciveLock);
+        sharedM -> sigUser2reciveCount++;
+        pthread_mutex_lock(&sigUser2reciveLock);
+    }//end of if
+
+}
+
 void blockSignal(){
 
 }
@@ -132,24 +164,6 @@ void blockSignal(){
 void unblockSignal(){
     
 }
-
-void sig1 (int signal){
-
-
-}
-
-void sig2(){
-
-}
-
-void sig1Handler(){
-
-}
-
-void sig2Handler(){
-
-}
-
 
 void reporter(){
 
