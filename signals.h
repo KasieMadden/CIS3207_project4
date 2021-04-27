@@ -52,7 +52,8 @@ double avgTime1 = 0;
 double avgTime2 = 0; 
 double timeSum1 = 0;
 double timeSum2 = 0;
-int  counter = 0;
+int counter = 0;
+bool endProcess = false;
 
 
 timeval startTime;

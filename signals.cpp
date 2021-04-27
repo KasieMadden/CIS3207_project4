@@ -5,7 +5,6 @@
 int main() {
   
     //Create shared memory and attach to all processes
-
     //shared memory space
     int shmID = shmget(IPC_PRIVATE, sizeof(shMemory), IPC_CREAT | 0666);
     if (shmID < 0){
@@ -20,6 +19,7 @@ int main() {
         }//end of if
       // cout<<"sharedMem\t"<< sharedMem << endl;
 
+      mutexInit();
       pid_t process[8];
       for(int i = 0; i <= 8; i++){
           process[i] = fork();
@@ -31,12 +31,12 @@ int main() {
           if(process == 0 ){
               if(i < 2){
                   //creating sig1
-                  signalGenerator();
+                  signal1();
 
               }
               else if( i  < 4){
                   //creating sig2
-                  signalGenerator();
+                 signal2();
               }
               else if(i < 7){
                   signalGenerator();
@@ -44,37 +44,21 @@ int main() {
               else{
                   report();
               }
+                
             } // end of child
-
+        //parent process 
           if(process[i] > 0){
-          
-          //parent process 
+            sleep(30); 
+            endProcess = true;
+            
           //detach end of parent process
           shmdt(sharedM);
+            
           }
 
       }//end for for child/parent
 
 }//end of main()
-
-
-//need to go. Not to be in its own funcnction. 
-void timeHandler(){
-
-    struct timeval startTime; gettimeofday(&startTime, NULL); 
-    struct timeval currentTime; 
-    double elapsedTime = 0; 
-
-    while (elapsedTime <= 5) {
-    gettimeofday(&currentTime, NULL); 
-     //using the struct vals, find the difference between the start time and current time to calculate the actual elapsed time
-    elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + ((double) (currentTime.tv_usec - startTime.tv_usec) / 1000000); 
-
-    printf("%lf\n", elapsedTime);
-    sleep(1);
-    }
-
-}
 
 //random number generator
 int randomGenerator(int min, int max) {
@@ -111,9 +95,6 @@ void signalGenerator(){
     shmdt(sharedM);
 
 }//end of signal generator 
-
-
-
 
 
 //to Initialize the locks 
@@ -162,10 +143,13 @@ void signal2(){
     while(true){
         signal(SIGUSR2, sig2Handler);
         sleep(1);
+        if(endProcess){
+        shmdt(sharedM);
+        }
+
     }// end of while
 
     //detach
-    shmdt(sharedM);
 
 }//end of sig2()
 
@@ -196,23 +180,24 @@ void reportHandler(int theSignal){
     gettimeofday(&currentTime, NULL);
 
     if(theSignal == SIGUSR1){
+
         signal1count++;
         signal1past = elapsedTime;
         elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + ((double) (currentTime.tv_usec - startTime.tv_usec));
         sum = sum + (elapsedTime - signal1past);
-
-        
+        counter++;
 
     }//end of if
     else if(theSignal == SIGUSR2){
+
         signal2count++;
         signal2past = elapsedTime;
         elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + ((double) (currentTime.tv_usec - startTime.tv_usec));
         sum = sum + (elapsedTime - signal2past);
-        
+        counter++;
 
     }//end if else if
-    counter++;
+    
 
     //if  checks for ever 10 signals
     if(counter % 10 == 0 ){
@@ -220,8 +205,8 @@ void reportHandler(int theSignal){
     avgTime2 = timeSum2/signal2count; 
 
     cout << "Current Time: " << elapsedTime << endl;
-    cout << "SIGUSR1 " << "| Sent:  " << sharedM -> sigUser1SentCount << "Recived: " << sharedM -> sigUser1receiveCount << " Avg time between sigs" << avgTime1 << endl;
-    cout << "SIGUSR2 " << "| Sent:  " << sharedM -> sigUser2SentCount << "Recived: " << sharedM -> sigUser2receiveCount << " Avg time between sigs" << avgTime2 << endl;
+    cout << "SIGUSR1 " << "| Sent:  " << sharedM -> sigUser1SentCount << " | Recived: " << sharedM -> sigUser1receiveCount << " |Avg time between sigs" << avgTime1 << endl;
+    cout << "SIGUSR2 " << "| Sent:  " << sharedM -> sigUser2SentCount << " | Recived: " << sharedM -> sigUser2receiveCount << " |Avg time between sigs" << avgTime2 << endl;
     cout << "Total Signals sent: " << (sharedM -> sigUser1SentCount + sharedM -> sigUser2SentCount ) << endl;
     cout << "Total Signals Receivced" << counter << endl;
     //resetting back to 0 after every 10 signals 
@@ -243,14 +228,18 @@ void reportHandler(int theSignal){
 
 void report(){
 
-    signal(SIGUSR1, reportHandler);
-    signal(SIGUSR2, reportHandler);
+            signal(SIGUSR1, reportHandler);
+            signal(SIGUSR2, reportHandler);
 
     while(true){
+        sleep(1);
 
+        if(endProcess){
+            shmdt(sharedM);
+        }
     }
     //deatch
-    shmdt(sharedM);
+
 
 
 
