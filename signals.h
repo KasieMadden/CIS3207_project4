@@ -14,7 +14,7 @@
 
 using namespace std;
 
-void timeHandler();
+
 int randomGenerator(int min, int max);
 void signalGenerator();
 void mutexInit();
@@ -23,6 +23,7 @@ void signal2();
 void sig1Handler(int theSignal);
 void sig2Handler(int theSignal);
 void report(int theSignal);
+void reportHandler(int theSignal);
 //void blockSignal(int theSignal);
 //void unblockSignal(int theSignal);
 
@@ -37,7 +38,7 @@ typedef struct shMemory{
     int allSignalsReceived = 0;
 
 
-};
+}shMemory;
 
 //global crap
 shMemory *sharedM;
@@ -51,7 +52,7 @@ double avgTime1 = 0;
 double avgTime2 = 0; 
 double timeSum1 = 0;
 double timeSum2 = 0;
-double counter = 0;
+int  counter = 0;
 
 
 timeval startTime;

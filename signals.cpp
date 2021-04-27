@@ -37,7 +37,6 @@ int main() {
               else if( i  < 4){
                   //creating sig2
                   signalGenerator();
-                
               }
               else if(i < 7){
                   signalGenerator();
@@ -45,7 +44,7 @@ int main() {
               else{
                   report();
               }
-          } // end of child
+            } // end of child
 
           if(process[i] > 0){
           
@@ -54,10 +53,12 @@ int main() {
           shmdt(sharedM);
           }
 
-      }//end 
+      }//end for for child/parent
 
 }//end of main()
 
+
+//need to go. Not to be in its own funcnction. 
 void timeHandler(){
 
     struct timeval startTime; gettimeofday(&startTime, NULL); 
@@ -102,7 +103,6 @@ void signalGenerator(){
         sharedM -> sigUser2SentCount++;
         pthread_mutex_unlock(&sigUser1SentLock);
         kill(0,SIGUSR2);
-
     }
         usleep(randTime);
 
@@ -111,6 +111,10 @@ void signalGenerator(){
     shmdt(sharedM);
 
 }//end of signal generator 
+
+
+
+
 
 //to Initialize the locks 
 void mutexInit(){
@@ -185,22 +189,6 @@ void sig2Handler(int theSignal){
     }//end of if
 
 }
-/*
-void blockSignal(int theSignal){
-    sigset_t signalSet;
-    sigemptyset(&signalSet);
-    sigaddset(&signalSet, theSignal);
-    sigprocmask(SIG_BLOCK, &signalSet, NULL);
-}//end of block()
-
-void unblockSignal(int theSignal){
-    sigset_t signalSet;
-    sigemptyset(&signalSet);
-    sigaddset(&signalSet, theSignal);
-    sigprocmask(SIG_UNBLOCK, &signalSet, NULL);
-
-}//end of unblock()
-*/
 
 void reportHandler(int theSignal){
     //gets time when gets signal 
@@ -213,23 +201,29 @@ void reportHandler(int theSignal){
         elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + ((double) (currentTime.tv_usec - startTime.tv_usec));
         sum = sum + (elapsedTime - signal1past);
 
+        
+
     }//end of if
     else if(theSignal == SIGUSR2){
         signal2count++;
         signal2past = elapsedTime;
         elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + ((double) (currentTime.tv_usec - startTime.tv_usec));
         sum = sum + (elapsedTime - signal2past);
+        
 
     }//end if else if
-    
+    counter++;
+
     //if  checks for ever 10 signals
+    if(counter % 10 == 0 ){
     avgTime1 = timeSum1/signal1count; 
     avgTime2 = timeSum2/signal2count; 
 
     cout << "Current Time: " << elapsedTime << endl;
-    cout << "SIGUSR1 " << "| Sent:  " << sharedM -> sigUser1SentCount << "Recived: " << sharedM -> sigUser1receiveCount << " Avg between sigs" << avgTime1 << endl;
-    cout << "SIGUSR2 " << "| Sent:  " << sharedM -> sigUser2SentCount << "Recived: " << sharedM -> sigUser2receiveCount << " Avg between sigs" << avgTime2 << endl;
-    
+    cout << "SIGUSR1 " << "| Sent:  " << sharedM -> sigUser1SentCount << "Recived: " << sharedM -> sigUser1receiveCount << " Avg time between sigs" << avgTime1 << endl;
+    cout << "SIGUSR2 " << "| Sent:  " << sharedM -> sigUser2SentCount << "Recived: " << sharedM -> sigUser2receiveCount << " Avg time between sigs" << avgTime2 << endl;
+    cout << "Total Signals sent: " << (sharedM -> sigUser1SentCount + sharedM -> sigUser2SentCount ) << endl;
+    cout << "Total Signals Receivced" << counter << endl;
     //resetting back to 0 after every 10 signals 
     signal1count = 0;
     signal2count = 0;
@@ -242,9 +236,7 @@ void reportHandler(int theSignal){
     elapsedTime = 0;
     sum = 0;
 
-
-
-
+    }//end of if cheching for 10 signals 
 
 
 }// end of reporthandler 
