@@ -51,7 +51,7 @@ double avgTime1 = 0;
 double avgTime2 = 0; 
 double timeSum1 = 0;
 double timeSum2 = 0;
-
+double counter = 0;
 
 
 timeval startTime;
