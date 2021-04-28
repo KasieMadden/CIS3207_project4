@@ -4,4 +4,4 @@
 
 
 signals: signals.cpp 
-	g++ signals.cpp  -o sig -std=c++11 
+	g++ signals.cpp  -o sig -std=c++11 -lpthread
