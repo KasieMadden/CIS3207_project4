@@ -10,22 +10,22 @@
 #include <pthread.h>
 #include <signal.h>
 
-
+#define MAX_SIGNAL_COUNT 100000
 
 using namespace std;
 
 
 int randomGenerator(int min, int max);
+void randomSleep();
 void signalGenerator();
 void mutexInit();
 void signal1();
 void signal2();
 void sig1Handler(int theSignal);
 void sig2Handler(int theSignal);
-void report(int theSignal);
+void report();
 void reportHandler(int theSignal);
-//void blockSignal(int theSignal);
-//void unblockSignal(int theSignal);
+
 
 //actually counters
 typedef struct shMemory{
@@ -42,19 +42,19 @@ typedef struct shMemory{
 
 //global crap
 shMemory *sharedM;
+
+//for time in report handler 
 double signal1count = 0; 
 double signal2count = 0; 
 double signal1past = 0; 
 double signal2past = 0;
 double elapsedTime = 0;
-double sum = 0;
 double avgTime1 = 0;
 double avgTime2 = 0; 
 double timeSum1 = 0;
 double timeSum2 = 0;
 int counter = 0;
 bool endProcess = false;
-
 
 timeval startTime;
 
