@@ -4,4 +4,4 @@
 
 
 signals: signals.cpp 
-	g++ signals.cpp  -o sig -std=c++11 -lpthread
+	g++ signals.cpp  -o sig -std=c++11 -lpthread -Wall -Werror
