@@ -2,7 +2,8 @@
 
 
 int main() {
-    cout << "hello from main" << endl;
+    //cout << "hello from main" << endl;
+       //seed
        srand(time(0));
   
     //Create shared memory and attach to all processes
@@ -21,7 +22,7 @@ int main() {
     signal(SIGUSR1, SIG_IGN);// ignore signal 1
     signal(SIGUSR2, SIG_IGN);// ignore signal 2
 
-    //creating the process for 9 
+    //creating the processes
     pid_t process[8];
     for(int i = 0; i < 8; i++){
 
@@ -60,9 +61,8 @@ int main() {
    }//end for() process        
         //parent process 
 
-            cout << "parent process" << endl;
-            sleep(30);
-            
+            //cout << "parent process" << endl;
+            sleep(5);
             endProcess = true;
             kill(0, SIGTERM);
             //detach end of parent process
@@ -73,50 +73,45 @@ int main() {
 
 //random number generator
 int randomGenerator(int min, int max) {
-  return rand() %2;
+    //will either be 0 or 1
+    return rand() %2;
 }//end of randomNum()
 
-//ran
+// random time for usleep
 void randomSleep(){
+    //for micro seconds
     usleep(rand() % 100000 + 10000);
 }
 
 //signal generator
 void signalGenerator(){
-//signal(SIGUSR1, SIG_IGN);// ignore signal 1
-//signal(SIGUSR2, SIG_IGN);// ignore signal 2
 
-
-cout << "signal Generator ()" << endl;
-
+//cout << "signal Generator ()" << endl;
 
 while(true){
     int randNum = randomGenerator(0, 1);  
-    //cout<< "ranum: "<< randNum << endl;
-    //int randTime = (randomGenerator(10000,100000)); //for microsecond 
+
+    // if randmun is 0 will send to SIG1
     if (randNum == 0  ){
-       
-        pthread_mutex_lock(&sigUser1SentLock);
-        sharedM -> sigUser1SentCount++;
-        pthread_mutex_unlock(&sigUser1SentLock);
-        kill(0,SIGUSR1);
+        pthread_mutex_lock(&sigUser1SentLock);//lock so other processes can't mod it
+        sharedM -> sigUser1SentCount++; // 
+        pthread_mutex_unlock(&sigUser1SentLock); //unlock for other processes
+        kill(0,SIGUSR1); // send signal
     }//end of 0-50
 
+    //
     else if(randNum == 1){
-      
         pthread_mutex_lock(&sigUser2SentLock);
         sharedM -> sigUser2SentCount++;
         pthread_mutex_unlock(&sigUser2SentLock);
         kill(0,SIGUSR2);
     }//end of 50-100
 
-
-
     //suspend execution 
     randomSleep();
-  //detach
-           if(endProcess){
-            shmdt(sharedM);
+        //detach
+        if(endProcess){
+        shmdt(sharedM);
         }
 
     }//end of while loop
@@ -127,7 +122,6 @@ while(true){
 //to Initialize the locks for sent and receive 1&2
 void mutexInit(){
 
-   
     int success = 0; 
     success = pthread_mutex_init(&sigUser1SentLock, NULL); 
     if(success != 0){
@@ -149,9 +143,6 @@ void mutexInit(){
         cout<<"Initializer for lock failed" <<endl;
         exit(1);
     }
-
-    
-
 }//end 
 
 
@@ -162,9 +153,9 @@ void signal1(){
 
    signal(SIGTERM, sig1Handler);
     while(true){
-        
-       
+        //suspend
         sleep(1);
+        //detach 
         if(endProcess){
             shmdt(sharedM);
         }
@@ -177,18 +168,13 @@ void signal2(){
     //cout << "signal2()" << endl;
 
     signal(SIGUSR1, SIG_IGN); // ingnore signal 1 
-    signal(SIGUSR2, sig2Handler);
-
-    signal(SIGTERM, sig2Handler);
-    while(true){
-        
-        
+    signal(SIGUSR2, sig2Handler);// send  to handler
+    signal(SIGTERM, sig2Handler);//termanate 
+    while(true){ 
         sleep(1);
-
         if(endProcess){
         shmdt(sharedM);
         }
-
     }// end of while
 
 
@@ -213,12 +199,12 @@ void sig1Handler(int theSignal){
 
 void sig2Handler(int theSignal){
 
-
      if(theSignal == SIGUSR2){
-        pthread_mutex_lock(&sigUser2receiveLock);
+        pthread_mutex_lock(&sigUser2receiveLock); //lock so other processes can't use
         sharedM -> sigUser2receiveCount++; //accecssing the shared memory
-        pthread_mutex_unlock(&sigUser2receiveLock);
+        pthread_mutex_unlock(&sigUser2receiveLock); //unlock
     }//end of if
+    //detach
        else if(theSignal == SIGTERM ){
         shmdt(sharedM);
 
@@ -226,6 +212,8 @@ void sig2Handler(int theSignal){
 
 }
 
+
+// prints report and handles time
 void reportHandler(int theSignal){
     //gets time when gets signal 
    
@@ -233,21 +221,17 @@ void reportHandler(int theSignal){
     gettimeofday(&currentTime, NULL);
 
     if(theSignal == SIGUSR1){
-
         signal1count++;
         signal1past = elapsedTime;
         elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + (double) ((currentTime.tv_usec - startTime.tv_usec)/1000000.0 );
         timeSum1 = timeSum2 + (elapsedTime - signal1past);
         counter++;
-
     }//end of if
     
     else if(theSignal == SIGUSR2){
-
         signal2count++;
         signal2past = elapsedTime;
-        elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + (double) ((currentTime.tv_usec - startTime.tv_usec)/1000000.0 );
-        
+        elapsedTime = (double) (currentTime.tv_sec - startTime.tv_sec) + (double) ((currentTime.tv_usec - startTime.tv_usec)/1000000.0 ); //to put it in micro secons 
         timeSum2 = timeSum2 + (elapsedTime - signal2past);
         counter++;
 
@@ -260,6 +244,7 @@ void reportHandler(int theSignal){
     avgTime2 = timeSum2/signal2count; 
 
     cout << endl;
+    ///dived by 2 because 2 processes that mod counter and listening for signals
     cout << "SIGUSR1 " << "\tSent:  " << sharedM -> sigUser1SentCount << "\tReceived: " << (sharedM -> sigUser1receiveCount/2) << "\tAvg time for sig1: " << avgTime1 << endl;
     cout << "SIGUSR2 " << "\tSent:  " << sharedM -> sigUser2SentCount << "\tReceived: " << (sharedM -> sigUser2receiveCount/2) << "\tAvg time for sig2: " << avgTime2 << endl;
     cout << "Current Time: " << elapsedTime << endl;
@@ -278,32 +263,33 @@ void reportHandler(int theSignal){
     timeSum1 = 0; 
     timeSum2 = 0; 
     elapsedTime = 0;
-    
-
     }//end of if cheching for 10 signals 
    
     
 
 }// end of reporthandler 
 
+
+
+// Initialize report 
+//
+
 void report(){
     //cout << "report() " << endl;
         signal(SIGUSR1, reportHandler);
         signal(SIGUSR2, reportHandler);
-        signal(SIGTERM, reportHandler);
         //signal(SIGTERM, reportHandler);
-        gettimeofday(&startTime, NULL);
-    while(true){
-        
+       gettimeofday(&startTime, NULL);
+
+    while(true){    
         sleep(1);
 
-        if(counter == MAX_SIGNAL_COUNT ){
+        //to use when the set signals 
+        if(counter == TEST_SIGNAL_COUNT ){
 
             shmdt(sharedM);
             kill(0, SIGTERM);
-    }//end of if 
-
+        }//end of if 
 
     }//end of while
-
 }//end of report

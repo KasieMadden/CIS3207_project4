@@ -1,5 +1,22 @@
-How did you test your program?
-How did you test individual pieces of your program?
-How did you know when something was working correctly before moving on?
+Kasie Madden , tuk33450 - OS Project 4
+Professor John Fiore
+TA Blake Patterson
+
+
+Testing:
+
+For this program, I used print statements to help debug any issues and understand how the 
+processes were being handled. From there, I focused only on signals being sent with the 
+current time. I set the sleep function to 5 seconds in the parent process and ran the program.
+This provided ample time to see any inconsistencies within my results and showed if there were any memory leaks. 
+Once my results were consistent, I moved on to handling time. Keeping the sleep function at 5 second, I 
+printed my results and based on the output I made adjustments to my math or addressed any other issues. 
+Last, to test a set number of signals, I increased the time in my sleep function within the parent process to 
+300 seconds and set the defined number to 100 signals and ran the program. Again, if there were any issues 
+I was able to see them and make the appropriate adjustments. 
+
+I decided to perform my testing in this manor because it was easier to see errors and not make the entire 
+program overwhelming to handle. Addressing each problem individually is more manageable and follows best practices.
+
 
 

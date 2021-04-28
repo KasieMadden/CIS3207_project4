@@ -1,0 +1,22 @@
+Kasie Madden , tuk33450 - OS Project 4
+Professor John Fiore
+TA Blake Patterson
+
+
+Signals Sent and Received:
+                        One of the first thing I realized was the loss of signals.
+                        I believe the losses are contributed to two things. First is when the process is being 
+                        terminated there might be signals that are waiting. Second is the time of day I was running 
+                        my code on the server. I noicted that the busier the server was, the greater the loss of signals. 
+                         
+
+Time: 
+    One thing I noticed about the current time was that the printed time didn't always finish exactly at 
+    the set time but rather several microseconds before. I've drawn the conclusion that this is because the 
+    system time is still running after it loops 10 signals. So it is running for the exact set duration, but the last
+    printed time will have been printed before the time is up. 
+
+    I also noticed that every so often the average time printed was -nan instead of a time. This was because 
+    there weren't any signals sent since the last received signal causing it to not have an average. 
+
+

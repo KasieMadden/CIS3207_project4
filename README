@@ -1,0 +1,36 @@
+Kasie Madden , tuk33450 - OS Project 4
+Professor John Fiore
+TA Blake Patterson
+
+
+Overview:
+
+The purpose of this program is to introduce signals and demonstrate the use of servicing signals 
+sent by other processes. The processes are sent and carried out concurrently, while the execution 
+of these processes are tracked and analyzed. 
+
+This proram is tracking signals sent, signals received and the average time in between the signals received. 
+In addition, it tracks the current time, total signals sent and total signals received. 
+
+This program holds a parent process, 4 signal processes, 3 signal generators and a reporting process - 
+giving the program a total of 9 processes.  
+
+The parent process: 
+                The parent process creates 8 children processes, controls the start time and waits for the
+                children to finish. 
+
+Signal process:
+                The signal process is only handling one SIGUSR at a time and ignoring the other SIGUSR.          
+
+Signal generator:
+                The signal generator is executing a random signal that is between SIGUSR1 and SIGUSR2. 
+
+Reporting Process: 
+                The reporting process is responding both to SIGUSR1 and SIGUSR2. It handles the time and 
+                tracks the number of each occurrences of either SIGUSR1 or SIGUSR2 every 10 signals. 
+
+
+
+Please read testing.txt for more information on testing the program. 
+
+Please read results.txt for more information on analyzing the results of the output.

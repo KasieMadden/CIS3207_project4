@@ -10,7 +10,7 @@
 #include <pthread.h>
 #include <signal.h>
 
-#define MAX_SIGNAL_COUNT 100000
+#define TEST_SIGNAL_COUNT 200
 
 using namespace std;
 
@@ -25,6 +25,7 @@ void sig1Handler(int theSignal);
 void sig2Handler(int theSignal);
 void report();
 void reportHandler(int theSignal);
+
 
 
 //actually counters
