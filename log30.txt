@@ -1,0 +1,1000 @@
+hello from main
+Creating Signal 1 
+Creating Signal 2 
+Creating Signal Generator 
+signal Generator ()
+parent process
+Creating Signal 1 
+Creating Reporter 
+Creating Signal 2 
+Creating Signal Generator 
+signal Generator ()
+Creating Signal Generator 
+signal Generator ()
+
+Current Time: 0.137784
+SIGUSR1 Sent:  6 Received: 5 Avg time between sigs7.38e-05
+SIGUSR2 Sent:  5 Received: 5 Avg time between sigs0.0132088
+Total Signals sent: 11
+Total Signals Received10
+
+
+Current Time: 0.268945
+SIGUSR1 Sent:  12 Received: 11 Avg time between sigs0.0253977
+SIGUSR2 Sent:  9 Received: 9 Avg time between sigs0.0380253
+Total Signals sent: 21
+Total Signals Received20
+
+
+Current Time: 0.595143
+SIGUSR1 Sent:  13 Received: 12 Avg time between sigs0.595143
+SIGUSR2 Sent:  18 Received: 18 Avg time between sigs0.0543137
+Total Signals sent: 31
+Total Signals Received30
+
+
+Current Time: 0.764915
+SIGUSR1 Sent:  17 Received: 16 Avg time between sigs0.0231548
+SIGUSR2 Sent:  24 Received: 24 Avg time between sigs0.0150823
+Total Signals sent: 41
+Total Signals Received40
+
+
+Current Time: 0.977783
+SIGUSR1 Sent:  21 Received: 20 Avg time between sigs0.0493793
+SIGUSR2 Sent:  30 Received: 30 Avg time between sigs0.0328725
+Total Signals sent: 51
+Total Signals Received50
+
+
+Current Time: 1.21799
+SIGUSR1 Sent:  27 Received: 26 Avg time between sigs0.180299
+SIGUSR2 Sent:  34 Received: 34 Avg time between sigs0.276221
+Total Signals sent: 61
+Total Signals Received60
+
+
+Current Time: 1.33854
+SIGUSR1 Sent:  35 Received: 34 Avg time between sigs0.152798
+SIGUSR2 Sent:  36 Received: 36 Avg time between sigs0.610166
+Total Signals sent: 71
+Total Signals Received70
+
+
+Current Time: 1.53243
+SIGUSR1 Sent:  39 Received: 38 Avg time between sigs0.0393695
+SIGUSR2 Sent:  42 Received: 42 Avg time between sigs0.0261955
+Total Signals sent: 81
+Total Signals Received80
+
+
+Current Time: 1.82713
+SIGUSR1 Sent:  49 Received: 48 Avg time between sigs0.0102156
+SIGUSR2 Sent:  42 Received: 42 Avg time between sigs-nan
+Total Signals sent: 91
+Total Signals Received90
+
+
+Current Time: 2.01816
+SIGUSR1 Sent:  51 Received: 50 Avg time between sigs0.000145
+SIGUSR2 Sent:  50 Received: 50 Avg time between sigs0.0235894
+Total Signals sent: 101
+Total Signals Received100
+
+
+Current Time: 2.27978
+SIGUSR1 Sent:  54 Received: 53 Avg time between sigs0.730043
+SIGUSR2 Sent:  57 Received: 57 Avg time between sigs0.312843
+Total Signals sent: 111
+Total Signals Received110
+
+
+Current Time: 2.47849
+SIGUSR1 Sent:  61 Received: 60 Avg time between sigs0.0212477
+SIGUSR2 Sent:  60 Received: 60 Avg time between sigs0.0146757
+Total Signals sent: 121
+Total Signals Received120
+
+
+Current Time: 2.67297
+SIGUSR1 Sent:  66 Received: 65 Avg time between sigs0.0114784
+SIGUSR2 Sent:  66 Received: 65 Avg time between sigs0.0283848
+Total Signals sent: 132
+Total Signals Received130
+
+
+Current Time: 2.95141
+SIGUSR1 Sent:  76 Received: 75 Avg time between sigs0.0108213
+SIGUSR2 Sent:  66 Received: 65 Avg time between sigs-nan
+Total Signals sent: 142
+Total Signals Received140
+
+
+Current Time: 3.31961
+SIGUSR1 Sent:  81 Received: 78 Avg time between sigs0.0205433
+SIGUSR2 Sent:  75 Received: 70 Avg time between sigs0.04918
+Total Signals sent: 156
+Total Signals Received150
+
+
+Current Time: 3.51514
+SIGUSR1 Sent:  84 Received: 81 Avg time between sigs1.14619
+SIGUSR2 Sent:  85 Received: 76 Avg time between sigs0.499093
+Total Signals sent: 169
+Total Signals Received160
+
+
+Current Time: 3.74711
+SIGUSR1 Sent:  84 Received: 81 Avg time between sigs-nan
+SIGUSR2 Sent:  97 Received: 87 Avg time between sigs0.374711
+Total Signals sent: 181
+Total Signals Received170
+
+
+Current Time: 3.90726
+SIGUSR1 Sent:  85 Received: 82 Avg time between sigs3.90726
+SIGUSR2 Sent:  108 Received: 95 Avg time between sigs0.428136
+Total Signals sent: 194
+Total Signals Received180
+
+
+Current Time: 4.16575
+SIGUSR1 Sent:  90 Received: 86 Avg time between sigs0.0417783
+SIGUSR2 Sent:  114 Received: 101 Avg time between sigs0.0278318
+Total Signals sent: 204
+Total Signals Received190
+
+
+Current Time: 4.40375
+SIGUSR1 Sent:  101 Received: 96 Avg time between sigs0.533997
+SIGUSR2 Sent:  117 Received: 104 Avg time between sigs2.08818
+Total Signals sent: 219
+Total Signals Received200
+
+
+Current Time: 4.58325
+SIGUSR1 Sent:  105 Received: 100 Avg time between sigs1.875e-05
+SIGUSR2 Sent:  123 Received: 109 Avg time between sigs0.0229643
+Total Signals sent: 228
+Total Signals Received210
+
+
+Current Time: 4.85778
+SIGUSR1 Sent:  113 Received: 106 Avg time between sigs0.0175291
+SIGUSR2 Sent:  126 Received: 111 Avg time between sigs0.034276
+Total Signals sent: 239
+Total Signals Received220
+
+
+Current Time: 5.06569
+SIGUSR1 Sent:  119 Received: 113 Avg time between sigs0.00496643
+SIGUSR2 Sent:  129 Received: 114 Avg time between sigs0.0115773
+Total Signals sent: 248
+Total Signals Received230
+
+
+Current Time: 5.5238
+SIGUSR1 Sent:  123 Received: 117 Avg time between sigs0.0616523
+SIGUSR2 Sent:  139 Received: 121 Avg time between sigs0.0523801
+Total Signals sent: 262
+Total Signals Received240
+
+
+Current Time: 5.65564
+SIGUSR1 Sent:  128 Received: 122 Avg time between sigs1.11496
+SIGUSR2 Sent:  144 Received: 126 Avg time between sigs1.11493
+Total Signals sent: 272
+Total Signals Received250
+
+
+Current Time: 5.95327
+SIGUSR1 Sent:  129 Received: 123 Avg time between sigs5.65574
+SIGUSR2 Sent:  153 Received: 135 Avg time between sigs0.0330588
+Total Signals sent: 282
+Total Signals Received260
+
+
+Current Time: 6.18705
+SIGUSR1 Sent:  129 Received: 123 Avg time between sigs-nan
+SIGUSR2 Sent:  163 Received: 145 Avg time between sigs0.618705
+Total Signals sent: 292
+Total Signals Received270
+
+
+Current Time: 6.28814
+SIGUSR1 Sent:  134 Received: 128 Avg time between sigs1.24408
+SIGUSR2 Sent:  168 Received: 150 Avg time between sigs1.24404
+Total Signals sent: 302
+Total Signals Received280
+
+
+Current Time: 6.34515
+SIGUSR1 Sent:  144 Received: 138 Avg time between sigs3.77e-05
+SIGUSR2 Sent:  168 Received: 150 Avg time between sigs-nan
+Total Signals sent: 312
+Total Signals Received290
+
+
+Current Time: 6.47003
+SIGUSR1 Sent:  150 Received: 144 Avg time between sigs0.00528383
+SIGUSR2 Sent:  172 Received: 154 Avg time between sigs0.019739
+Total Signals sent: 322
+Total Signals Received300
+
+
+Current Time: 6.6632
+SIGUSR1 Sent:  156 Received: 150 Avg time between sigs1.07848
+SIGUSR2 Sent:  176 Received: 158 Avg time between sigs1.63855
+Total Signals sent: 332
+Total Signals Received310
+
+
+Current Time: 6.87191
+SIGUSR1 Sent:  162 Received: 156 Avg time between sigs1.12348
+SIGUSR2 Sent:  180 Received: 162 Avg time between sigs1.68516
+Total Signals sent: 342
+Total Signals Received320
+
+
+Current Time: 7.12702
+SIGUSR1 Sent:  166 Received: 160 Avg time between sigs0.0414363
+SIGUSR2 Sent:  186 Received: 168 Avg time between sigs0.0214318
+Total Signals sent: 352
+Total Signals Received330
+
+
+Current Time: 7.3404
+SIGUSR1 Sent:  173 Received: 167 Avg time between sigs0.0130837
+SIGUSR2 Sent:  189 Received: 171 Avg time between sigs0.0304497
+Total Signals sent: 362
+Total Signals Received340
+
+
+Current Time: 7.4859
+SIGUSR1 Sent:  174 Received: 168 Avg time between sigs7.34075
+SIGUSR2 Sent:  198 Received: 180 Avg time between sigs0.0161283
+Total Signals sent: 372
+Total Signals Received350
+
+
+Current Time: 7.69003
+SIGUSR1 Sent:  181 Received: 175 Avg time between sigs0.0136366
+SIGUSR2 Sent:  201 Received: 183 Avg time between sigs0.0250983
+Total Signals sent: 382
+Total Signals Received360
+
+
+Current Time: 7.85389
+SIGUSR1 Sent:  183 Received: 177 Avg time between sigs0.0001995
+SIGUSR2 Sent:  209 Received: 191 Avg time between sigs0.0204125
+Total Signals sent: 392
+Total Signals Received370
+
+
+Current Time: 7.99942
+SIGUSR1 Sent:  183 Received: 177 Avg time between sigs-nan
+SIGUSR2 Sent:  219 Received: 201 Avg time between sigs0.799942
+Total Signals sent: 402
+Total Signals Received380
+
+
+Current Time: 8.1499
+SIGUSR1 Sent:  187 Received: 181 Avg time between sigs2.02771
+SIGUSR2 Sent:  225 Received: 207 Avg time between sigs1.33759
+Total Signals sent: 412
+Total Signals Received390
+
+
+Current Time: 8.39607
+SIGUSR1 Sent:  189 Received: 183 Avg time between sigs0.0001625
+SIGUSR2 Sent:  233 Received: 215 Avg time between sigs0.0307174
+Total Signals sent: 422
+Total Signals Received400
+
+
+Current Time: 8.6246
+SIGUSR1 Sent:  198 Received: 192 Avg time between sigs0.932957
+SIGUSR2 Sent:  234 Received: 216 Avg time between sigs8.39637
+Total Signals sent: 432
+Total Signals Received410
+
+
+Current Time: 8.93812
+SIGUSR1 Sent:  205 Received: 199 Avg time between sigs0.0203846
+SIGUSR2 Sent:  237 Received: 219 Avg time between sigs0.033144
+Total Signals sent: 442
+Total Signals Received420
+
+
+Current Time: 9.07697
+SIGUSR1 Sent:  212 Received: 206 Avg time between sigs0.00985371
+SIGUSR2 Sent:  240 Received: 222 Avg time between sigs0.022916
+Total Signals sent: 452
+Total Signals Received430
+
+
+Current Time: 9.18834
+SIGUSR1 Sent:  213 Received: 207 Avg time between sigs9.07726
+SIGUSR2 Sent:  249 Received: 231 Avg time between sigs0.0123413
+Total Signals sent: 462
+Total Signals Received440
+
+
+Current Time: 9.39752
+SIGUSR1 Sent:  216 Received: 210 Avg time between sigs8.8e-05
+SIGUSR2 Sent:  256 Received: 238 Avg time between sigs0.0156244
+Total Signals sent: 472
+Total Signals Received450
+
+
+Current Time: 9.58296
+SIGUSR1 Sent:  218 Received: 212 Avg time between sigs4.74971
+SIGUSR2 Sent:  264 Received: 246 Avg time between sigs1.1874
+Total Signals sent: 482
+Total Signals Received460
+
+
+Current Time: 9.78875
+SIGUSR1 Sent:  219 Received: 213 Avg time between sigs9.58319
+SIGUSR2 Sent:  273 Received: 255 Avg time between sigs0.0228393
+Total Signals sent: 492
+Total Signals Received470
+
+
+Current Time: 9.95189
+SIGUSR1 Sent:  223 Received: 217 Avg time between sigs0.023973
+SIGUSR2 Sent:  279 Received: 261 Avg time between sigs0.0138038
+Total Signals sent: 502
+Total Signals Received480
+
+
+Current Time: 10.0975
+SIGUSR1 Sent:  233 Received: 227 Avg time between sigs1.6e-05
+SIGUSR2 Sent:  279 Received: 261 Avg time between sigs-nan
+Total Signals sent: 512
+Total Signals Received490
+
+
+Current Time: 10.2781
+SIGUSR1 Sent:  237 Received: 231 Avg time between sigs0.02041
+SIGUSR2 Sent:  285 Received: 267 Avg time between sigs0.0160137
+Total Signals sent: 522
+Total Signals Received500
+
+
+Current Time: 10.5458
+SIGUSR1 Sent:  244 Received: 238 Avg time between sigs1.48965
+SIGUSR2 Sent:  288 Received: 270 Avg time between sigs3.44539
+Total Signals sent: 532
+Total Signals Received510
+
+
+Current Time: 10.7116
+SIGUSR1 Sent:  251 Received: 245 Avg time between sigs0.00290671
+SIGUSR2 Sent:  291 Received: 273 Avg time between sigs0.00671067
+Total Signals sent: 542
+Total Signals Received520
+
+
+Current Time: 10.8499
+SIGUSR1 Sent:  255 Received: 248 Avg time between sigs0.0299348
+SIGUSR2 Sent:  297 Received: 279 Avg time between sigs0.0199433
+Total Signals sent: 552
+Total Signals Received530
+
+
+Current Time: 11.1612
+SIGUSR1 Sent:  264 Received: 255 Avg time between sigs1.56591
+SIGUSR2 Sent:  300 Received: 281 Avg time between sigs3.65269
+Total Signals sent: 564
+Total Signals Received540
+
+
+Current Time: 11.3835
+SIGUSR1 Sent:  270 Received: 261 Avg time between sigs3.94e-05
+SIGUSR2 Sent:  306 Received: 287 Avg time between sigs0.0224216
+Total Signals sent: 576
+Total Signals Received550
+
+
+Current Time: 11.6731
+SIGUSR1 Sent:  273 Received: 264 Avg time between sigs3.81628
+SIGUSR2 Sent:  315 Received: 294 Avg time between sigs1.65677
+Total Signals sent: 588
+Total Signals Received560
+
+
+Current Time: 11.826
+SIGUSR1 Sent:  276 Received: 266 Avg time between sigs3e-05
+SIGUSR2 Sent:  324 Received: 301 Avg time between sigs0.0103231
+Total Signals sent: 600
+Total Signals Received570
+
+
+Current Time: 12.1649
+SIGUSR1 Sent:  280 Received: 270 Avg time between sigs3.01371
+SIGUSR2 Sent:  330 Received: 307 Avg time between sigs1.9951
+Total Signals sent: 610
+Total Signals Received580
+
+
+Current Time: 12.4104
+SIGUSR1 Sent:  288 Received: 275 Avg time between sigs0.0123822
+SIGUSR2 Sent:  336 Received: 311 Avg time between sigs0.0216674
+Total Signals sent: 624
+Total Signals Received590
+
+
+Current Time: 12.7505
+SIGUSR1 Sent:  298 Received: 285 Avg time between sigs0.0095487
+SIGUSR2 Sent:  336 Received: 311 Avg time between sigs-nan
+Total Signals sent: 634
+Total Signals Received600
+
+
+Current Time: 12.9374
+SIGUSR1 Sent:  303 Received: 290 Avg time between sigs9.4e-06
+SIGUSR2 Sent:  341 Received: 316 Avg time between sigs0.0219852
+Total Signals sent: 645
+Total Signals Received610
+
+
+Current Time: 13.1006
+SIGUSR1 Sent:  309 Received: 296 Avg time between sigs2.1582
+SIGUSR2 Sent:  345 Received: 320 Avg time between sigs3.23728
+Total Signals sent: 654
+Total Signals Received620
+
+
+Current Time: 13.296
+SIGUSR1 Sent:  313 Received: 300 Avg time between sigs3.29841
+SIGUSR2 Sent:  351 Received: 326 Avg time between sigs2.19024
+Total Signals sent: 664
+Total Signals Received630
+
+
+Current Time: 13.4599
+SIGUSR1 Sent:  321 Received: 308 Avg time between sigs1.3375e-05
+SIGUSR2 Sent:  353 Received: 328 Avg time between sigs0.0354455
+Total Signals sent: 674
+Total Signals Received640
+
+
+Current Time: 13.6303
+SIGUSR1 Sent:  321 Received: 308 Avg time between sigs-nan
+SIGUSR2 Sent:  363 Received: 337 Avg time between sigs1.36303
+Total Signals sent: 684
+Total Signals Received650
+
+
+Current Time: 13.9962
+SIGUSR1 Sent:  331 Received: 316 Avg time between sigs1.72241
+SIGUSR2 Sent:  366 Received: 339 Avg time between sigs6.83654
+Total Signals sent: 697
+Total Signals Received660
+
+
+Current Time: 14.2727
+SIGUSR1 Sent:  339 Received: 323 Avg time between sigs3.33333e-05
+SIGUSR2 Sent:  370 Received: 343 Avg time between sigs0.030236
+Total Signals sent: 709
+Total Signals Received670
+
+
+Current Time: 14.456
+SIGUSR1 Sent:  345 Received: 329 Avg time between sigs2.86947
+SIGUSR2 Sent:  375 Received: 348 Avg time between sigs2.86945
+Total Signals sent: 720
+Total Signals Received680
+
+
+Current Time: 14.6986
+SIGUSR1 Sent:  348 Received: 332 Avg time between sigs4.88596
+SIGUSR2 Sent:  382 Received: 355 Avg time between sigs2.09626
+Total Signals sent: 730
+Total Signals Received690
+
+
+Current Time: 14.8537
+SIGUSR1 Sent:  348 Received: 332 Avg time between sigs-nan
+SIGUSR2 Sent:  392 Received: 365 Avg time between sigs1.48537
+Total Signals sent: 740
+Total Signals Received700
+
+
+Current Time: 15.0024
+SIGUSR1 Sent:  354 Received: 338 Avg time between sigs2.48771
+SIGUSR2 Sent:  396 Received: 369 Avg time between sigs3.73154
+Total Signals sent: 750
+Total Signals Received710
+
+
+Current Time: 15.2381
+SIGUSR1 Sent:  364 Received: 348 Avg time between sigs0.0108772
+SIGUSR2 Sent:  396 Received: 369 Avg time between sigs-nan
+Total Signals sent: 760
+Total Signals Received720
+
+
+Current Time: 15.3396
+SIGUSR1 Sent:  369 Received: 353 Avg time between sigs0.005785
+SIGUSR2 Sent:  401 Received: 374 Avg time between sigs0.010602
+Total Signals sent: 770
+Total Signals Received730
+
+
+Current Time: 15.4923
+SIGUSR1 Sent:  369 Received: 353 Avg time between sigs-nan
+SIGUSR2 Sent:  411 Received: 384 Avg time between sigs1.54923
+Total Signals sent: 780
+Total Signals Received740
+
+
+Current Time: 15.7277
+SIGUSR1 Sent:  376 Received: 360 Avg time between sigs2.2286
+SIGUSR2 Sent:  414 Received: 387 Avg time between sigs5.1728
+Total Signals sent: 790
+Total Signals Received750
+
+
+Current Time: 15.9747
+SIGUSR1 Sent:  378 Received: 362 Avg time between sigs0.0001
+SIGUSR2 Sent:  422 Received: 395 Avg time between sigs0.0308269
+Total Signals sent: 800
+Total Signals Received760
+
+
+Current Time: 16.1127
+SIGUSR1 Sent:  381 Received: 365 Avg time between sigs5.33782
+SIGUSR2 Sent:  429 Received: 402 Avg time between sigs2.29911
+Total Signals sent: 810
+Total Signals Received770
+
+
+Current Time: 16.4636
+SIGUSR1 Sent:  384 Received: 368 Avg time between sigs8.46667e-05
+SIGUSR2 Sent:  436 Received: 409 Avg time between sigs0.040302
+Total Signals sent: 820
+Total Signals Received780
+
+
+Current Time: 16.6603
+SIGUSR1 Sent:  389 Received: 373 Avg time between sigs3.3109
+SIGUSR2 Sent:  441 Received: 414 Avg time between sigs3.31086
+Total Signals sent: 830
+Total Signals Received790
+
+
+Current Time: 16.8536
+SIGUSR1 Sent:  396 Received: 380 Avg time between sigs0.00711057
+SIGUSR2 Sent:  444 Received: 417 Avg time between sigs0.016515
+Total Signals sent: 840
+Total Signals Received800
+
+
+Current Time: 17.2001
+SIGUSR1 Sent:  402 Received: 386 Avg time between sigs3.91667e-05
+SIGUSR2 Sent:  448 Received: 421 Avg time between sigs0.0387568
+Total Signals sent: 850
+Total Signals Received810
+
+
+Current Time: 17.3994
+SIGUSR1 Sent:  407 Received: 391 Avg time between sigs3.44665
+SIGUSR2 Sent:  453 Received: 426 Avg time between sigs3.44661
+Total Signals sent: 860
+Total Signals Received820
+
+
+Current Time: 17.6133
+SIGUSR1 Sent:  408 Received: 392 Avg time between sigs17.3997
+SIGUSR2 Sent:  462 Received: 435 Avg time between sigs0.0237417
+Total Signals sent: 870
+Total Signals Received830
+
+
+Current Time: 17.8044
+SIGUSR1 Sent:  415 Received: 399 Avg time between sigs0.0204257
+SIGUSR2 Sent:  465 Received: 438 Avg time between sigs0.0245497
+Total Signals sent: 880
+Total Signals Received840
+
+
+Current Time: 17.962
+SIGUSR1 Sent:  420 Received: 404 Avg time between sigs0.020674
+SIGUSR2 Sent:  470 Received: 443 Avg time between sigs0.0246108
+Total Signals sent: 890
+Total Signals Received850
+
+
+Current Time: 18.0513
+SIGUSR1 Sent:  426 Received: 410 Avg time between sigs3.00075
+SIGUSR2 Sent:  474 Received: 447 Avg time between sigs4.50106
+Total Signals sent: 900
+Total Signals Received860
+
+
+Current Time: 18.2359
+SIGUSR1 Sent:  432 Received: 416 Avg time between sigs3.01758
+SIGUSR2 Sent:  478 Received: 451 Avg time between sigs4.54018
+Total Signals sent: 910
+Total Signals Received870
+
+
+Current Time: 18.419
+SIGUSR1 Sent:  438 Received: 422 Avg time between sigs3.03944
+SIGUSR2 Sent:  482 Received: 455 Avg time between sigs4.5739
+Total Signals sent: 920
+Total Signals Received880
+
+
+Current Time: 18.5827
+SIGUSR1 Sent:  441 Received: 425 Avg time between sigs6.16045
+SIGUSR2 Sent:  489 Received: 462 Avg time between sigs2.64188
+Total Signals sent: 930
+Total Signals Received890
+
+
+Current Time: 18.8626
+SIGUSR1 Sent:  448 Received: 432 Avg time between sigs0.0124413
+SIGUSR2 Sent:  492 Received: 465 Avg time between sigs0.0205653
+Total Signals sent: 940
+Total Signals Received900
+
+
+Current Time: 19.068
+SIGUSR1 Sent:  453 Received: 437 Avg time between sigs7.24e-05
+SIGUSR2 Sent:  497 Received: 470 Avg time between sigs0.0249596
+Total Signals sent: 950
+Total Signals Received910
+
+
+Current Time: 19.2582
+SIGUSR1 Sent:  456 Received: 440 Avg time between sigs6.35621
+SIGUSR2 Sent:  504 Received: 477 Avg time between sigs2.7433
+Total Signals sent: 960
+Total Signals Received920
+
+
+Current Time: 19.6005
+SIGUSR1 Sent:  457 Received: 441 Avg time between sigs19.6005
+SIGUSR2 Sent:  513 Received: 486 Avg time between sigs2.16639
+Total Signals sent: 971
+Total Signals Received930
+
+
+Current Time: 19.721
+SIGUSR1 Sent:  468 Received: 449 Avg time between sigs2.86e-05
+SIGUSR2 Sent:  513 Received: 486 Avg time between sigs-nan
+Total Signals sent: 981
+Total Signals Received940
+
+
+Current Time: 19.9943
+SIGUSR1 Sent:  468 Received: 449 Avg time between sigs-nan
+SIGUSR2 Sent:  524 Received: 497 Avg time between sigs1.99943
+Total Signals sent: 992
+Total Signals Received950
+
+
+Current Time: 20.2305
+SIGUSR1 Sent:  474 Received: 454 Avg time between sigs3.33247
+SIGUSR2 Sent:  528 Received: 501 Avg time between sigs5.02006
+Total Signals sent: 1002
+Total Signals Received960
+
+
+Current Time: 20.4256
+SIGUSR1 Sent:  482 Received: 462 Avg time between sigs0.0187174
+SIGUSR2 Sent:  531 Received: 504 Avg time between sigs0.0300473
+Total Signals sent: 1013
+Total Signals Received970
+
+
+Current Time: 20.5763
+SIGUSR1 Sent:  489 Received: 468 Avg time between sigs0.006157
+SIGUSR2 Sent:  534 Received: 506 Avg time between sigs0.014305
+Total Signals sent: 1023
+Total Signals Received980
+
+
+Current Time: 20.8151
+SIGUSR1 Sent:  493 Received: 472 Avg time between sigs5.19318
+SIGUSR2 Sent:  540 Received: 512 Avg time between sigs3.4559
+Total Signals sent: 1033
+Total Signals Received990
+
+
+Current Time: 21.1195
+SIGUSR1 Sent:  500 Received: 479 Avg time between sigs0.0151804
+SIGUSR2 Sent:  543 Received: 515 Avg time between sigs0.0353773
+Total Signals sent: 1043
+Total Signals Received1000
+
+
+Current Time: 21.288
+SIGUSR1 Sent:  507 Received: 486 Avg time between sigs0.00829386
+SIGUSR2 Sent:  546 Received: 518 Avg time between sigs0.0192993
+Total Signals sent: 1053
+Total Signals Received1010
+
+
+Current Time: 21.5578
+SIGUSR1 Sent:  511 Received: 490 Avg time between sigs0.0559227
+SIGUSR2 Sent:  552 Received: 524 Avg time between sigs0.0350097
+Total Signals sent: 1063
+Total Signals Received1020
+
+
+Current Time: 21.6766
+SIGUSR1 Sent:  516 Received: 495 Avg time between sigs1.88e-05
+SIGUSR2 Sent:  557 Received: 529 Avg time between sigs0.018559
+Total Signals sent: 1073
+Total Signals Received1030
+
+
+Current Time: 21.8411
+SIGUSR1 Sent:  519 Received: 498 Avg time between sigs7.2676
+SIGUSR2 Sent:  564 Received: 536 Avg time between sigs3.11468
+Total Signals sent: 1083
+Total Signals Received1040
+
+
+Current Time: 22.1364
+SIGUSR1 Sent:  525 Received: 503 Avg time between sigs0.0205416
+SIGUSR2 Sent:  570 Received: 542 Avg time between sigs0.0418524
+Total Signals sent: 1095
+Total Signals Received1050
+
+
+Current Time: 22.3291
+SIGUSR1 Sent:  528 Received: 505 Avg time between sigs7.37884
+SIGUSR2 Sent:  577 Received: 548 Avg time between sigs3.17973
+Total Signals sent: 1105
+Total Signals Received1060
+
+
+Current Time: 22.4753
+SIGUSR1 Sent:  534 Received: 510 Avg time between sigs4.47356
+SIGUSR2 Sent:  585 Received: 556 Avg time between sigs4.47355
+Total Signals sent: 1119
+Total Signals Received1070
+
+
+Current Time: 22.7279
+SIGUSR1 Sent:  540 Received: 514 Avg time between sigs5.64034
+SIGUSR2 Sent:  591 Received: 562 Avg time between sigs3.77638
+Total Signals sent: 1131
+Total Signals Received1080
+
+
+Current Time: 22.9965
+SIGUSR1 Sent:  540 Received: 514 Avg time between sigs-nan
+SIGUSR2 Sent:  601 Received: 572 Avg time between sigs2.29965
+Total Signals sent: 1141
+Total Signals Received1090
+
+
+Current Time: 23.3147
+SIGUSR1 Sent:  549 Received: 521 Avg time between sigs3.29035
+SIGUSR2 Sent:  606 Received: 575 Avg time between sigs7.67748
+Total Signals sent: 1155
+Total Signals Received1100
+
+
+Current Time: 23.5802
+SIGUSR1 Sent:  553 Received: 524 Avg time between sigs0.0445375
+SIGUSR2 Sent:  612 Received: 580 Avg time between sigs0.0188515
+Total Signals sent: 1165
+Total Signals Received1110
+
+
+Current Time: 23.8288
+SIGUSR1 Sent:  557 Received: 528 Avg time between sigs0.0427287
+SIGUSR2 Sent:  618 Received: 586 Avg time between sigs0.0284357
+Total Signals sent: 1175
+Total Signals Received1120
+
+
+Current Time: 23.9502
+SIGUSR1 Sent:  567 Received: 538 Avg time between sigs1.94e-05
+SIGUSR2 Sent:  618 Received: 586 Avg time between sigs-nan
+Total Signals sent: 1185
+Total Signals Received1130
+
+
+Current Time: 24.2552
+SIGUSR1 Sent:  568 Received: 539 Avg time between sigs24.2552
+SIGUSR2 Sent:  627 Received: 595 Avg time between sigs2.68434
+Total Signals sent: 1195
+Total Signals Received1140
+
+
+Current Time: 24.492
+SIGUSR1 Sent:  575 Received: 546 Avg time between sigs0.0106577
+SIGUSR2 Sent:  630 Received: 598 Avg time between sigs0.0248227
+Total Signals sent: 1205
+Total Signals Received1150
+
+
+Current Time: 24.7168
+SIGUSR1 Sent:  582 Received: 553 Avg time between sigs3.21429e-05
+SIGUSR2 Sent:  633 Received: 601 Avg time between sigs0.030092
+Total Signals sent: 1215
+Total Signals Received1160
+
+
+Current Time: 24.9888
+SIGUSR1 Sent:  592 Received: 563 Avg time between sigs0.0090455
+SIGUSR2 Sent:  633 Received: 601 Avg time between sigs-nan
+Total Signals sent: 1225
+Total Signals Received1170
+
+
+Current Time: 25.2358
+SIGUSR1 Sent:  599 Received: 570 Avg time between sigs0.0101587
+SIGUSR2 Sent:  636 Received: 604 Avg time between sigs0.0236563
+Total Signals sent: 1235
+Total Signals Received1180
+
+
+Current Time: 25.5794
+SIGUSR1 Sent:  604 Received: 575 Avg time between sigs0.0719715
+SIGUSR2 Sent:  642 Received: 610 Avg time between sigs0.0300238
+Total Signals sent: 1246
+Total Signals Received1190
+
+
+Current Time: 25.7845
+SIGUSR1 Sent:  615 Received: 585 Avg time between sigs0.0002582
+SIGUSR2 Sent:  642 Received: 610 Avg time between sigs-nan
+Total Signals sent: 1257
+Total Signals Received1200
+
+
+Current Time: 26.0267
+SIGUSR1 Sent:  621 Received: 591 Avg time between sigs0.000258
+SIGUSR2 Sent:  646 Received: 614 Avg time between sigs0.0275162
+Total Signals sent: 1267
+Total Signals Received1210
+
+
+Current Time: 26.2871
+SIGUSR1 Sent:  627 Received: 597 Avg time between sigs4.33842
+SIGUSR2 Sent:  650 Received: 618 Avg time between sigs6.53337
+Total Signals sent: 1277
+Total Signals Received1220
+
+
+Current Time: 26.4896
+SIGUSR1 Sent:  627 Received: 597 Avg time between sigs-nan
+SIGUSR2 Sent:  660 Received: 628 Avg time between sigs2.64896
+Total Signals sent: 1287
+Total Signals Received1230
+
+
+Current Time: 26.8143
+SIGUSR1 Sent:  631 Received: 600 Avg time between sigs0.058599
+SIGUSR2 Sent:  666 Received: 634 Avg time between sigs0.0300892
+Total Signals sent: 1297
+Total Signals Received1240
+
+
+Current Time: 26.9909
+SIGUSR1 Sent:  641 Received: 610 Avg time between sigs6.96e-05
+SIGUSR2 Sent:  666 Received: 634 Avg time between sigs-nan
+Total Signals sent: 1307
+Total Signals Received1250
+
+
+Current Time: 27.2044
+SIGUSR1 Sent:  645 Received: 615 Avg time between sigs0.0004175
+SIGUSR2 Sent:  672 Received: 639 Avg time between sigs0.0277878
+Total Signals sent: 1317
+Total Signals Received1260
+
+
+Current Time: 27.4514
+SIGUSR1 Sent:  645 Received: 615 Avg time between sigs-nan
+SIGUSR2 Sent:  682 Received: 650 Avg time between sigs2.74514
+Total Signals sent: 1327
+Total Signals Received1270
+
+
+Current Time: 27.6289
+SIGUSR1 Sent:  650 Received: 620 Avg time between sigs5.50375
+SIGUSR2 Sent:  687 Received: 655 Avg time between sigs5.5036
+Total Signals sent: 1337
+Total Signals Received1280
+
+
+Current Time: 27.76
+SIGUSR1 Sent:  654 Received: 623 Avg time between sigs0.0130095
+SIGUSR2 Sent:  693 Received: 661 Avg time between sigs0.00842183
+Total Signals sent: 1347
+Total Signals Received1290
+
+
+Current Time: 27.9088
+SIGUSR1 Sent:  658 Received: 627 Avg time between sigs0.024968
+SIGUSR2 Sent:  699 Received: 667 Avg time between sigs0.0152848
+Total Signals sent: 1357
+Total Signals Received1300
+
+
+Current Time: 28.0784
+SIGUSR1 Sent:  665 Received: 634 Avg time between sigs0.00504914
+SIGUSR2 Sent:  702 Received: 670 Avg time between sigs0.0115043
+Total Signals sent: 1367
+Total Signals Received1310
+
+
+Current Time: 28.1787
+SIGUSR1 Sent:  672 Received: 641 Avg time between sigs0.00286586
+SIGUSR2 Sent:  705 Received: 673 Avg time between sigs0.006187
+Total Signals sent: 1377
+Total Signals Received1320
+
+
+Current Time: 28.4622
+SIGUSR1 Sent:  679 Received: 648 Avg time between sigs0.0252003
+SIGUSR2 Sent:  708 Received: 676 Avg time between sigs0.0236413
+Total Signals sent: 1387
+Total Signals Received1330
+
+
+Current Time: 28.6126
+SIGUSR1 Sent:  684 Received: 654 Avg time between sigs0.0002842
+SIGUSR2 Sent:  713 Received: 681 Avg time between sigs0.0106908
+Total Signals sent: 1397
+Total Signals Received1340
+
+
+Current Time: 28.792
+SIGUSR1 Sent:  693 Received: 662 Avg time between sigs3.17949
+SIGUSR2 Sent:  714 Received: 682 Avg time between sigs28.6141
+Total Signals sent: 1407
+Total Signals Received1350
+
+
+Current Time: 29.05
+SIGUSR1 Sent:  702 Received: 672 Avg time between sigs0.000156333
+SIGUSR2 Sent:  715 Received: 683 Avg time between sigs0.106488
+Total Signals sent: 1417
+Total Signals Received1360
+
+
+Current Time: 29.1557
+SIGUSR1 Sent:  708 Received: 678 Avg time between sigs4.84229
+SIGUSR2 Sent:  719 Received: 687 Avg time between sigs7.27357
+Total Signals sent: 1427
+Total Signals Received1370
+
+
+Current Time: 29.3811
+SIGUSR1 Sent:  711 Received: 680 Avg time between sigs9.76864
+SIGUSR2 Sent:  726 Received: 694 Avg time between sigs4.18635
+Total Signals sent: 1437
+Total Signals Received1380
+
+
+Current Time: 29.5615
+SIGUSR1 Sent:  714 Received: 684 Avg time between sigs0.000492667
+SIGUSR2 Sent:  733 Received: 700 Avg time between sigs0.0133066
+Total Signals sent: 1447
+Total Signals Received1390
+
+
+Current Time: 29.7022
+SIGUSR1 Sent:  719 Received: 688 Avg time between sigs5.92485
+SIGUSR2 Sent:  738 Received: 706 Avg time between sigs5.92469
+Total Signals sent: 1457
+Total Signals Received1400
+
+
+Current Time: 29.8057
+SIGUSR1 Sent:  726 Received: 695 Avg time between sigs0.003508
+SIGUSR2 Sent:  741 Received: 709 Avg time between sigs0.007697
+Total Signals sent: 1467
+Total Signals Received1410
+
