@@ -200,7 +200,7 @@ void sig1Handler(int theSignal){
 
     if(theSignal == SIGUSR1){
         pthread_mutex_lock(&sigUser1receiveLock);
-        (sharedM -> sigUser1receiveCount++);//accecssing the shared memory
+        sharedM -> sigUser1receiveCount++;//accecssing the shared memory
         pthread_mutex_unlock(&sigUser1receiveLock);
         
     }//end of if
@@ -216,7 +216,7 @@ void sig2Handler(int theSignal){
 
      if(theSignal == SIGUSR2){
         pthread_mutex_lock(&sigUser2receiveLock);
-        (sharedM -> sigUser2receiveCount++); //accecssing the shared memory
+        sharedM -> sigUser2receiveCount++; //accecssing the shared memory
         pthread_mutex_unlock(&sigUser2receiveLock);
     }//end of if
        else if(theSignal == SIGTERM ){
@@ -260,11 +260,11 @@ void reportHandler(int theSignal){
     avgTime2 = timeSum2/signal2count; 
 
     cout << endl;
+    cout << "SIGUSR1 " << "\tSent:  " << sharedM -> sigUser1SentCount << "\tReceived: " << (sharedM -> sigUser1receiveCount/2) << "\tAvg time for sig1: " << avgTime1 << endl;
+    cout << "SIGUSR2 " << "\tSent:  " << sharedM -> sigUser2SentCount << "\tReceived: " << (sharedM -> sigUser2receiveCount/2) << "\tAvg time for sig2: " << avgTime2 << endl;
     cout << "Current Time: " << elapsedTime << endl;
-    cout << "SIGUSR1 " << "Sent:  " << sharedM -> sigUser1SentCount << " Received: " << (sharedM -> sigUser1receiveCount/2) << " Avg time between sigs" << avgTime1 << endl;
-    cout << "SIGUSR2 " << "Sent:  " << sharedM -> sigUser2SentCount << " Received: " << (sharedM -> sigUser2receiveCount/2) << " Avg time between sigs" << avgTime2 << endl;
-    cout << "Total Signals sent: " << (sharedM -> sigUser1SentCount + sharedM -> sigUser2SentCount ) << endl;
-    cout << "Total Signals Received" << counter << endl;
+    cout << "Total Signals Sent: " << (sharedM -> sigUser1SentCount + sharedM -> sigUser2SentCount ) << endl;
+    cout << "Total Signals Received: " << counter << endl;
     cout << endl;
 
 
@@ -291,7 +291,7 @@ void report(){
         signal(SIGUSR1, reportHandler);
         signal(SIGUSR2, reportHandler);
         signal(SIGTERM, reportHandler);
-        signal(SIGTERM, reportHandler);
+        //signal(SIGTERM, reportHandler);
         gettimeofday(&startTime, NULL);
     while(true){
         
