@@ -1,0 +1,5 @@
+How did you test your program?
+How did you test individual pieces of your program?
+How did you know when something was working correctly before moving on?
+
+
