@@ -93,7 +93,7 @@ cout << "signal Generator ()" << endl;
 while(true){
     int randNum = randomGenerator(0, 1);  
     //cout<< "ranum: "<< randNum << endl;
-    int randTime = (randomGenerator(10000,100000)); //for microsecond 
+    //int randTime = (randomGenerator(10000,100000)); //for microsecond 
     if (randNum == 0  ){
        
         pthread_mutex_lock(&sigUser1SentLock);
@@ -198,9 +198,9 @@ void signal2(){
 void sig1Handler(int theSignal){
     
 
-    if(theSignal = SIGUSR1){
+    if(theSignal == SIGUSR1){
         pthread_mutex_lock(&sigUser1receiveLock);
-        sharedM -> sigUser1receiveCount++;//accecssing the shared memory
+        (sharedM -> sigUser1receiveCount++);//accecssing the shared memory
         pthread_mutex_unlock(&sigUser1receiveLock);
         
     }//end of if
@@ -214,9 +214,9 @@ void sig1Handler(int theSignal){
 void sig2Handler(int theSignal){
 
 
-     if(theSignal = SIGUSR2){
+     if(theSignal == SIGUSR2){
         pthread_mutex_lock(&sigUser2receiveLock);
-        sharedM -> sigUser2receiveCount++; //accecssing the shared memory
+        (sharedM -> sigUser2receiveCount++); //accecssing the shared memory
         pthread_mutex_unlock(&sigUser2receiveLock);
     }//end of if
        else if(theSignal == SIGTERM ){
@@ -296,7 +296,7 @@ void report(){
     while(true){
         
         sleep(1);
-        
+
         if(counter == MAX_SIGNAL_COUNT ){
 
             shmdt(sharedM);
